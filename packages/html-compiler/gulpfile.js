@@ -17,10 +17,12 @@ var watchedBrowserify = watchify(
     entries: ["src/main.ts"],
     cache: {},
     packageCache: {},
-  }).plugin(tsify).transform("babelify", {
-    presets: ["es2015"],
-    extensions: [".ts"],
   })
+    .plugin(tsify)
+    .transform("babelify", {
+      presets: ["es2015"],
+      extensions: [".ts"],
+    })
 );
 gulp.task("copy-html", function () {
   return gulp.src(paths.pages).pipe(gulp.dest("dist"));

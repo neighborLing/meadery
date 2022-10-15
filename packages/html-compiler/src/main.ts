@@ -1,8 +1,3 @@
-import { sayHello } from "./greet";
-
-function showHello(divName: string, name: string) {
-    const elt = document.getElementById(divName);
-    elt.innerText = sayHello(name);
+export function compiler(template: string, options: string): string {
+  return '';
 }
-
-showHello("greeting", "TypeScript");
