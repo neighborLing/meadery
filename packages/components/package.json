@@ -29,7 +29,9 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "monent": "0.0.2-security",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "recharts": "^2.1.14"
   }
 }
