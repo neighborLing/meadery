@@ -1630,6 +1630,8 @@
      var injector = createInjector(modules, config.strictDi);
      injector.invoke(['$rootScope', '$rootElement', '$compile', '$injector',
         function bootstrapApply(scope, element, compile, injector) {
+          debugger;
+          console.log('element: ', element);
          scope.$apply(function() {
            element.data('$injector', injector);
            compile(element)(scope);
@@ -2733,6 +2735,7 @@
    }
  
    if ((parsed = jqLiteBuildFragment(html, context))) {
+    console.log('jqLiteBuildFragment(html, context): ', jqLiteBuildFragment(html, context));
      return parsed.childNodes;
    }
  
@@ -2760,6 +2763,7 @@
  
    if (argIsString) {
      jqLiteAddNodes(this, jqLiteParseHTML(element));
+     console.log('qLiteParseHTML(element): ', qLiteParseHTML(element));
    } else {
      jqLiteAddNodes(this, element);
    }
