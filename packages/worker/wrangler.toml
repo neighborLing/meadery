@@ -1,0 +1,6 @@
+name = "worker"
+main = "src/index.ts"
+compatibility_date = "2022-10-16"
+
+kv_namespaces = [
+]
