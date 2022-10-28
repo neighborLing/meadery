@@ -11,7 +11,7 @@
   "scripts": {
     "start": "wrangler dev",
     "deploy": "wrangler publish",
-    "build": "worktop build index.js"
+    "build": "worktop build ./src/index.ts"
   },
   "dependencies": {
     "faunadb": "^4.7.0",
