@@ -4,8 +4,8 @@ import "./index.less";
 
 function HeaderLayout() {
   return (
-    <div>
-      <div className="w-16 h-16">
+    <div className="px-4 py-2 h-12 bg-wrapper shadow-default">
+      <div className="w-8 h-8">
         <img src={logo} alt="" />
       </div>
     </div>
