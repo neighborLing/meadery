@@ -25,7 +25,26 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.less$/i,
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
     ],
+  },
+  resolve: {
+    mainFiles: ["index", "default"],
+    extensions: [".js", ".json", ".jsx"],
+    alias: {
+      "@": path.join(__dirname, "../src"),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
