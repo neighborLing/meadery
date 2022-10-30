@@ -6,10 +6,12 @@ module.exports = {
   mode: "development",
   entry: {
     react: ["react", "react-dom"],
+    fetch: ["axios"],
+    shared: ["lodash"]
   },
   output: {
     path: dllDir,
-    filename: "[name].dll.js",
+    filename: "[name].[contenthash].dll.js",
     library: "[name]_dll",
   },
   plugins: [

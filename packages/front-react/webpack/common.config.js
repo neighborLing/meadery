@@ -6,7 +6,7 @@ module.exports = {
     index: path.join(__dirname, "../src/index.js"),
   },
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[contenthash].bundle.js",
     path: distPath,
     clean: {
       keep: /dll/
