@@ -6,7 +6,7 @@
   "scripts": {
     "test": "webpack --config ./webpack/test.config.js",
     "build:dll": "webpack --config ./webpack/dll.config.js",
-    "dev": "webpack --config ./webpack/dev.config.js",
+    "dev": "webpack serve --open --config ./webpack/dev.config.js",
     "build": "webpack --config ./webpack/prod.config.js"
   },
   "keywords": [],
@@ -17,6 +17,7 @@
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
     "web-vitals": "^3.0.4"
   },
   "devDependencies": {
