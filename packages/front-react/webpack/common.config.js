@@ -1,5 +1,6 @@
 const path = require("path");
 const distPath = path.resolve(__dirname, "../dist");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -8,7 +9,7 @@ module.exports = {
   output: {
     filename: "[name].[contenthash].bundle.js",
     path: distPath,
-    clean: true
+    clean: true,
   },
   module: {
     rules: [
@@ -28,11 +29,11 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {
         test: /\.less$/i,
-        use: ["style-loader", "css-loader", "less-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"],
       },
     ],
   },
@@ -43,7 +44,8 @@ module.exports = {
       "@": path.join(__dirname, "../src"),
     },
   },
-  plugins: [
-
-  ],
+  plugins: [new MiniCssExtractPlugin({
+    filename: "[name].[contenthash:8].css",
+    chunkFilename: `[name].[contenthash:8].chunk.css`,
+  })],
 };
