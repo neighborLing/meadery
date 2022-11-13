@@ -10,10 +10,7 @@ module.exports = merge(common, {
     new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
       title: "demo1",
-      template: path.join(__dirname, "../src/index.ejs"),
-      templateParameters: {
-        dll: []
-      }
+      template: path.join(__dirname, "../src/index.ejs")
     })
   ],
 });

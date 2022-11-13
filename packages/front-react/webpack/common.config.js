@@ -8,9 +8,7 @@ module.exports = {
   output: {
     filename: "[name].[contenthash].bundle.js",
     path: distPath,
-    clean: {
-      keep: /dll/
-    },
+    clean: true
   },
   module: {
     rules: [
