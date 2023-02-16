@@ -15,7 +15,7 @@ module.exports = {
         // 字体基础色
         tn: "#92abcf",
         // 发光字体
-        light,
+        // light,
         // box标题
         title: "hsl(216 41% 84%)",
         /**
@@ -46,7 +46,7 @@ module.exports = {
         192: "48rem",
       },
       borderColor: {
-        light,
+        // light,
       },
     },
   },
