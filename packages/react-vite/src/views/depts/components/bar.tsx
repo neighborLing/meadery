@@ -16,7 +16,7 @@ const barDisplay = ({
 }) => {
   return (
     <Card title={title} className={`mx-5 my-5 ${className}`}>
-        <BarChart width={1200} height={300} data={data}>
+        <BarChart width={1200} height={300} data={data} className="m-auto">
           <XAxis dataKey="name" />
           <YAxis />
           {/*// 设置padding 10px*/}
